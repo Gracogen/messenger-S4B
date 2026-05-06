@@ -1,16 +1,40 @@
-# React + Vite
+# WhisperBox - Encrypted Messaging App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A secure messaging application with end-to-end encryption. Built for HNG Stage 4B.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[Link will be added after deployment]
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React + Vite
+- Axios for API calls
+- Web Crypto API for encryption
+- JWT for authentication
 
-## Expanding the ESLint configuration
+## What This App Will Do
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Users can register and login
+- Messages are encrypted on the sender's device using AES-GCM
+- Only the intended recipient can decrypt messages
+- Server only stores encrypted ciphertext (cannot read messages)
+- Private keys never leave the client device
+
+## Project Status
+
+🚧 In active development. Core features coming:
+
+- [ ] Authentication (JWT)
+- [ ] Key generation and management
+- [ ] AES-GCM encryption/decryption
+- [ ] Send and receive encrypted messages
+- [ ] User identity management
+
+## Setup Instructions (for local testing)
+
+```bash
+git clone https://github.com/Gracogen/whisperbox-client.git
+cd whisperbox-client
+npm install
+npm run dev
